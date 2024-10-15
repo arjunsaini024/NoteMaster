@@ -1,0 +1,358 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar  */
+
+nav.navbar {
+    width: 100%;
+    height: 70px;
+    background-color:#f4f4f4;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.navbar .logo>a {
+  width: 120px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  /* Adjust logo size */
+}
+
+nav.navbar .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav.navbar .nav-links li {
+  list-style: none;
+}
+
+nav.navbar .nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 768px) {
+  nav.navbar .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    display: none;
+  }
+
+  nav.navbar .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+    nav.navbar .nav-links {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      display: none;
+    }
+  
+    nav.navbar .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+/* section-2 */
+.container {
+    background-color: #f4f4f4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section-2 {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+.text {
+    flex: 1;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.text>#heading {
+    font-size: 48px;
+    line-height: 56px;
+    font-family: "Questrial", sans-serif;
+    font-weight: normal;
+    color: rgb(37, 37, 37);
+}
+
+.text>#para {
+    font-size: 18px;
+    line-height: 28px;
+    font-family: "Questrial", sans-serif;
+    color: rgb(37, 37, 37);
+    margin: 20px 0;
+}
+
+.text>#button {
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img>img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding-top: 100px; /* Add padding-top for desktop devices */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .section-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .text>#heading {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .text>#para {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .img>img {
+        padding-top: 0; /* Remove padding-top for mobile and tablet devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .text>#heading {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .text>#para {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .text>#button {
+        width: 160px;
+        height: 36px;
+    }
+
+    .img>img {
+        max-width: 100%;
+        padding-top: 0; /* Ensure no padding-top for mobile */
+    }
+}
+
+
+/* Categories */
+
+.cat-heading {
+  font-size: 48px;
+  line-height: 52px;
+  font-family: "Questrial 400 normal";
+  color: rgb(37, 37, 37);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.Categories {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items at the top */
+  padding: 20px 0;
+}
+
+.category-item {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column; /* Ensures the image and text are stacked */
+  text-align: left; /* Aligns text to the left */
+  margin: 10px;
+  cursor: pointer;
+}
+
+.category-item img {
+  width: 100%;
+  height: 450px;
+  max-width: 430px;
+}
+
+h1 {
+  color: rgb(37, 37, 37);
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Questrial 400 normal";
+  margin-top: 10px;
+  text-align: left; /* Ensure heading is left-aligned */
+}
+
+@media (max-width: 768px) {
+  .category-item {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* Bestsellers Section */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.collections {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.collection-item {
+  flex: 1 1 22%; /* 4 items per row */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.collection-item img {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Ensures uniform image size */
+}
+
+.collection-title {
+  color: rgb(37, 37, 37);
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Questrial 400 normal";
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .collections {
+    justify-content: center; /* Center items in rows */
+  }
+  .collection-item {
+    flex: 1 1 45%; /* 2 items per row on tablets */
+  }
+  .cat-heading{
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collections {
+    justify-content: center; /* Center items in rows */
+  }
+  .collection-item {
+    flex: 1 1 100%; /* 1 item per row on smaller screens */
+    max-width: 400px;
+    align-items: center;
+  }
+  .cat-heading{
+    margin-left: 30px;
+  }
+}
